@@ -1,0 +1,103 @@
+.repos-div-div {
+  min-height: 70vh;
+}
+
+.repos-div {
+  margin: 1rem 0;
+  display: grid;
+  grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.repos-div .repos-boxes {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+  min-width: 300px;
+  word-wrap: break-word;
+  border-radius: 5px;
+  background: #fff;
+  color: #333;
+  position: relative;
+}
+
+.repos-div .repos-boxes span {
+  font-weight: 600;
+}
+
+.repos-boxes.active-box::before {
+  content: " ";
+  display: block;
+  background-color: #6969f5cb;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.pag-div {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pag-btn {
+  width: 36px;
+  height: 36px;
+  background-color: #6969f5cb;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  margin: 0.3rem;
+  transition: all 0.5s;
+  margin-top: 0.5rem 0;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.pag-btn.pag-active,
+.pag-btn:hover {
+  background-color: #6969f5;
+}
+
+.pag-btn:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.pag-search {
+  display: flex;
+  margin: 1rem 0 0.5rem;
+  justify-content: space-between;
+  font-size: 1.1rem;
+}
+
+.pag-search input {
+  outline: none;
+  border: 1px solid #6969f5cb;
+  padding: 0.3rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .users-main section {
+    flex-direction: column;
+  }
+
+  .users-main h1 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .pag-search {
+    flex-direction: column;
+  }
+}

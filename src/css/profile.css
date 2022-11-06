@@ -1,0 +1,28 @@
+.profile-main {
+  display: flex;
+
+  justify-content: center;
+}
+
+.profile-info {
+  font-size: 1.2rem;
+  background-color: #e6e4e4;
+  padding: 1rem;
+}
+
+.profile-image,
+.profile-info {
+  width: 70%;
+  max-width: 500px;
+}
+
+.profile-image img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .profile-main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
